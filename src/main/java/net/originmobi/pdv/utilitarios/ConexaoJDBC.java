@@ -12,7 +12,7 @@ public class ConexaoJDBC {
 	public DataSource abre() {
 		
 		try {
-			conexao = new DriverManagerDataSource("jdbc:mysql://localhost/pdv", "root", "123456");
+			conexao = new DriverManagerDataSource("jdbc:mysql://localhost:3306/pdv", "root", "123456");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
