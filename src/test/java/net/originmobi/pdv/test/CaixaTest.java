@@ -21,7 +21,7 @@ public class CaixaTest {
     void init(){
         //tipo = mock(CaixaTipo.class);
         user = mock(Usuario.class);
-        this.caixa = new Caixa("descrição do caixa",tipo.CAIXA,
+        this.caixa = new Caixa("descricao do caixa",tipo.CAIXA,
                 0.00, 0.00, 0.00,
                 new Date(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis()), user);
         }
@@ -136,5 +136,69 @@ public class CaixaTest {
         caixa.setUsuario(usr);
         assertNotNull(usr);
         assertEquals(usr, this.caixa.getUsuario());
+    }
+
+    //atributos fora do construtor
+    @Test
+    void testCodigo() {
+        Long cod = this.caixa.getCodigo();
+        assertNull(cod);
+
+        Long codigo = new Long (123456);
+        this.caixa.setCodigo(codigo);
+        assertNotNull(this.caixa.getCodigo());
+        assertEquals(codigo, this.caixa.getCodigo());
+    }
+
+    @Test
+    void testAgencia() {
+        String ag = this.caixa.getAgencia();
+        assertNull(ag);
+
+        String agencia = "5599-A";
+        this.caixa.setAgencia(agencia);
+        assertNotNull(this.caixa.getAgencia());
+        assertEquals(agencia, this.caixa.getAgencia());
+    }
+    @Test
+    void testConta() {
+        String conta = this.caixa.getConta();
+        assertNull(conta);
+
+        String novaConta = "0101-79";
+        this.caixa.setConta(novaConta);
+        assertNotNull(this.caixa.getConta());
+        assertEquals(novaConta, this.caixa.getConta());
+    }
+
+    @Test
+    void testValorEntrada() {
+        Double val = this.caixa.getValor_entrada();
+        assertNull(val);
+
+        Double valor = 15.00;
+        this.caixa.setValor_entrada(valor);
+        assertNotNull(this.caixa.getValor_entrada());
+        assertEquals(valor, this.caixa.getValor_entrada());
+    }
+
+    @Test
+    void testValorSaida() {
+        Double val = this.caixa.getValor_saida();
+        assertNull(val);
+
+        Double valor = 15.00;
+        this.caixa.setValor_saida(valor);
+        assertNotNull(this.caixa.getValor_saida());
+        assertEquals(valor, this.caixa.getValor_saida());
+    }
+
+    @Test
+    void testToString() {
+        Long codigo = new Long (123456);
+        this.caixa.setCodigo(codigo);
+        //descricao = this.caixa.getDescricao();
+        String str = "Caixa [codigo=" + 123456 + ", descricao=" + "descricao do caixa" + "]";
+        assertEquals(str, this.caixa.toString());
     }
 }
