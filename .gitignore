@@ -24,4 +24,6 @@ hs_err_pid*
 
 .idea/
 target/
+build/
+allure-results/
 *.iml
