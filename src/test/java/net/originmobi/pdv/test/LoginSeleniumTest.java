@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class LoginTest {
+public class LoginSeleniumTest {
 
     @BeforeAll
     public static void setUpAll() {
