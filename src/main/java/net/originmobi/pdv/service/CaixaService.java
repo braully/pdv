@@ -70,7 +70,7 @@ public class CaixaService {
         }
 
         try {
-            caixas.save(caixa);
+            caixa = caixas.save(caixa);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
             throw new RuntimeException("Erro no processo de abertura, chame o suporte técnico");
@@ -149,9 +149,8 @@ public class CaixaService {
         }
     }
 
-    //modificada de caixas.caixaAberto().isPresent() para !caixas.caixaAberto().isPresent()
     public boolean caixaIsAberto() {
-        return !caixas.caixaAberto().isPresent();
+        return caixas.caixaAberto().isPresent();
     }
 
     public List<Caixa> listaTodos() {

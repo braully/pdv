@@ -67,7 +67,7 @@ public class CaixaController {
 	public @ResponseBody String cadastro(@RequestParam Map<String, String> request, UriComponentsBuilder b) {
 		String descricao = request.get("descricao");
 		String tipo = request.get("tipo");
-		String vlAbertura = request.get("valor_abertura");
+		String vlAbertura = request.get("valorAbertura");
 		String agencia = request.get("agencia");
 		String conta = request.get("conta");
 
@@ -167,6 +167,7 @@ public class CaixaController {
 			mensagem = caixas.fechaCaixa(caixa, senha);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
+			return e.getMessage();
 		}
 
 		return mensagem;
