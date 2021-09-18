@@ -74,6 +74,7 @@ public class ProdutoServiceTest {
                 ArgumentMatchers.anyString(), ArgumentMatchers.anyInt(),
                 ArgumentMatchers.anyString(), ArgumentMatchers.any(java.sql.Date.class));
     }
+
     @Test
     @DisplayName("teste do metodo listar")
     public void listar(){

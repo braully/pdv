@@ -151,6 +151,8 @@ public class CaixaService {
 
     public boolean caixaIsAberto() {
         return caixas.caixaAberto().isPresent();
+
+
     }
 
     public List<Caixa> listaTodos() {

@@ -49,8 +49,4 @@ public class UsuarioFactory {
         return  user;
     }
 
-    public static Usuario createUserInvalidToInsert () {
-        Usuario user = null;
-        return  user;
-    }
 }

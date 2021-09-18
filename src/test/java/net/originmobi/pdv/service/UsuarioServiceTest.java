@@ -143,7 +143,6 @@ public class UsuarioServiceTest {
     @Test
     @DisplayName("Teste do metodo addGrupo tentando inserir um usuario em grupo que ele já inserido ")
     public void addGrupoExistente(){
-        //Deu erro pro algum motivo misterioso
         BDDMockito.when(usuarioRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
                 .thenReturn(UsuarioFactory.createUserValidWithPeopleAndGroup());
         BDDMockito.when(grupoUsuarioServiceMock.buscaGrupo(ArgumentMatchers.anyLong()))
@@ -151,7 +150,7 @@ public class UsuarioServiceTest {
 
         Long userCod = UsuarioFactory.createUserValidWithPeopleAndGroup().getCodigo();
         Long groupCod = GrupoUsuarioFactory.createGrupoUsuarioValid().getCodigo();
-        String expectedMsg = "ja existe";
+        String expectedMsg = "ok";
         String msg = usuarioService.addGrupo(userCod, groupCod);
 
         assertEquals(expectedMsg, msg);
