@@ -22,6 +22,13 @@ public class VendaProdutoFactory {
         return vendaProdutos;
     }
 
+    public  static List<VendaProduto> createNonObjListVendaProdutos(){
+        List<VendaProduto> vendaProdutos = new ArrayList<>();
+        VendaProduto vendaProduto = createVendaProdutoValid();
+        vendaProdutos.add(vendaProduto);
+        return vendaProdutos;
+    }
+
     public static List<Object[]> createListVendaProdutosQTD () {
 
         List<Object[]> resultado = new ArrayList<>();

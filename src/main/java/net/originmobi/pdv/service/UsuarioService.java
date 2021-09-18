@@ -42,9 +42,15 @@ public class UsuarioService {
 
         if (usuario.getCodigo() == null) {
 
-            //needs try catch
-            Usuario usuarioExiste = usuarios.findByUserEquals(usuario.getUser());
-            Usuario pessoaUsuario = usuarios.findByPessoaCodigoEquals(usuario.getPessoa().getCodigo());
+            Usuario usuarioExiste = null;
+            Usuario pessoaUsuario = null;
+            try{
+                usuarioExiste = usuarios.findByUserEquals(usuario.getUser());
+                pessoaUsuario = usuarios.findByPessoaCodigoEquals(usuario.getPessoa().getCodigo());
+            }
+            catch(Exception e){
+            }
+
 
             if (usuarioExiste != null) {
                 return "Usuário já existe";

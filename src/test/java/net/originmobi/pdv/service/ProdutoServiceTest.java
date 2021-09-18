@@ -21,7 +21,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 public class ProdutoServiceTest {
@@ -163,11 +163,51 @@ public class ProdutoServiceTest {
         Assertions.assertThatCode(() -> produtoService.movimentaEstoque(vendaProduto.getCodigo(), EntradaSaida.SAIDA)).doesNotThrowAnyException();
     }
 
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo movimentaEstoque com estoque insuficiente")
+    public void movimentaEstoqueInsuficiente(){
+        BDDMockito.when(produtoRepositoryMock.saldoEstoque(ArgumentMatchers.anyLong()))
+                .thenReturn(9);
+        VendaProduto vendaProduto = VendaProdutoFactory.createVendaProdutoValid();
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->produtoService.movimentaEstoque(vendaProduto.getCodigo(), EntradaSaida.SAIDA));
+        assertTrue(runtimeException.getMessage().contains("O produto de código 10 não tem estoque suficiente, verifique"));
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo movimentaEstoque com controle de estoque desativado (NAO)")
+    public void movimentaEstoqueControleEstoqueNAO(){
+        BDDMockito.when(produtoRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+                .thenReturn(ProdutoFactory.createValidProdutoControlEstoqueNao());
+
+        VendaProduto vendaProduto = VendaProdutoFactory.createVendaProdutoValid();
+        Assertions.assertThatCode(() -> produtoService.movimentaEstoque(vendaProduto.getCodigo(), EntradaSaida.SAIDA)).doesNotThrowAnyException();
+    }
+
     @Test
     @DisplayName("teste do metodo AjsuteEstoque")
     public void AjsuteEstoque(){
         Produto produto = ProdutoFactory.createProdutoValid();
         Assertions.assertThatCode(() -> produtoService.ajusteEstoque(produto.getCodigo(), 10,  EntradaSaida.SAIDA, "Venda", new Date(System.currentTimeMillis()))).doesNotThrowAnyException();
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo AjsuteEstoque com ajuste já processado")
+    public void AjsuteEstoqueJaProcessado(){
+        BDDMockito.when(produtoRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+                .thenReturn(ProdutoFactory.createValidProdutoControlEstoqueNao());
+
+        Produto produto = ProdutoFactory.createValidProdutoControlEstoqueNao();
+
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->produtoService.ajusteEstoque(produto.getCodigo(), 10,  EntradaSaida.SAIDA,
+                        "Venda", new Date(System.currentTimeMillis())));
+
+        assertTrue(runtimeException.getMessage().contains("O produto de código 0 não controla estoque, verifique"));
+
     }
 
 }

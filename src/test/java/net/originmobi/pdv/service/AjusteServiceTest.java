@@ -1,6 +1,7 @@
 package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.enumerado.EntradaSaida;
+import net.originmobi.pdv.filter.AjusteFilter;
 import net.originmobi.pdv.model.Ajuste;
 import net.originmobi.pdv.repository.AjusteRepository;
 import net.originmobi.pdv.utilitarios.AjusteFactory;
@@ -11,10 +12,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;

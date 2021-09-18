@@ -19,7 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 public class AjusteProdutoTest {
@@ -81,6 +81,7 @@ public class AjusteProdutoTest {
     @Test
     @DisplayName("teste do metodo addProduto")
     public  void addProduto(){
+
         String expectedResposta = "Ajuste processado com sucesso";
         AjusteProduto ajusteProduto = AjusteProdutoFactory.createAjusteProdutoValid();
         String resposta = ajusteProdutoServiceMock.addProduto(ajusteProduto.getAjuste().getCodigo(),
@@ -97,5 +98,78 @@ public class AjusteProdutoTest {
         String expectedResposta = "Produto removido com sucesso";
         String resposta = ajusteProdutoServiceMock.removeProduto(ajusteProduto.getAjuste().getCodigo(), ajusteProduto.getCodigo());
         assertEquals(expectedResposta, resposta);
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo removeProduto tentando remover um ajuste que ja foi processado")
+    public  void removeProdutoJaProcessado(){
+
+        BDDMockito.when(ajusteServiceMock.busca(ArgumentMatchers.anyLong()))
+                .thenReturn(Optional.of(AjusteFactory.createValidAjusteProcessado()));
+
+        AjusteProduto ajusteProduto = AjusteProdutoFactory.createAjusteProdutoValid();
+
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->ajusteProdutoServiceMock.removeProduto(
+                        ajusteProduto.getAjuste().getCodigo(), ajusteProduto.getCodigo()));
+
+        assertTrue(runtimeException.getMessage().contains("Ajuste já esta processado"));
+
+
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo addProduto com ajuste da processado")
+    public  void addProdutoProcessado(){
+
+        BDDMockito.when(ajusteServiceMock.busca(ArgumentMatchers.anyLong()))
+                .thenReturn(Optional.of(AjusteFactory.createValidAjusteProcessado()));
+
+        AjusteProduto ajusteProduto = AjusteProdutoFactory.createAjusteProdutoValid();
+
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->ajusteProdutoServiceMock.addProduto(ajusteProduto.getAjuste().getCodigo(),
+                        ajusteProduto.getProduto().getCodigo(), 55));
+
+        assertTrue(runtimeException.getMessage().contains("Ajuste já esta processado"));
+
+
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo addProduto com produto já ajustado")
+    public  void addProdutoJaAjustado(){
+
+        BDDMockito.when(ajusteProdutoRepositoryMock.buscaProdAjuste(ArgumentMatchers.anyLong(), ArgumentMatchers.anyLong()))
+                .thenReturn(1);
+
+        AjusteProduto ajusteProduto = AjusteProdutoFactory.createAjusteProdutoValid();
+
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->ajusteProdutoServiceMock.addProduto(ajusteProduto.getAjuste().getCodigo(),
+                        ajusteProduto.getProduto().getCodigo(), 55));
+
+        assertTrue(runtimeException.getMessage().contains("Este produto já existe neste ajuste"));
+
+
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("teste do metodo addProduto com quantidade de alteração invalida (igual a 0)")
+    public  void addProdutoQtdAlteracaoInvalida(){
+
+        AjusteProduto ajusteProduto = AjusteProdutoFactory.createAjusteProdutoValid();
+
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                () ->ajusteProdutoServiceMock.addProduto(ajusteProduto.getAjuste().getCodigo(),
+                        ajusteProduto.getProduto().getCodigo(), 0));
+
+        assertTrue(runtimeException.getMessage().contains("Quantidade inválido"));
+
+
     }
 }

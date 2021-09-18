@@ -40,7 +40,11 @@ public class UsuarioFactory {
     }
 
     public static Usuario createUserValidToInsert () {
+        Pessoa pessoa = new Pessoa();
+        pessoa.setCodigo(11L);
+
         Usuario user = createUserValid();
+        user.setPessoa(pessoa);
         user.setCodigo(null);
         return  user;
     }

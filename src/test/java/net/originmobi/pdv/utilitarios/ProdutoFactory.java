@@ -34,6 +34,11 @@ public class ProdutoFactory {
         produto.setCest("C E S T");
         return  produto;
     }
+    public static  Produto createValidProdutoControlEstoqueNao(){
+        Produto produto = createProdutoValid();
+        produto.setControlaEstoque(ProdutoControleEstoque.NAO);
+        return produto;
+    }
 
     public static Produto createProdutoValidToUpdate (){
         Produto produto = new Produto();

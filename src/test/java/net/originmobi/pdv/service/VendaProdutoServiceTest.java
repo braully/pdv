@@ -1,8 +1,10 @@
 package net.originmobi.pdv.service;
 
+import net.originmobi.pdv.model.Produto;
 import net.originmobi.pdv.model.Venda;
 import net.originmobi.pdv.model.VendaProduto;
 import net.originmobi.pdv.repository.VendaProdutosRepository;
+import net.originmobi.pdv.utilitarios.ProdutoFactory;
 import net.originmobi.pdv.utilitarios.VendaFactory;
 import net.originmobi.pdv.utilitarios.VendaProdutoFactory;
 import org.assertj.core.api.Assertions;
@@ -40,6 +42,12 @@ public class VendaProdutoServiceTest {
 
         BDDMockito.when(vendaProdutosRepositoryMock.findByProdutosDaVenda(ArgumentMatchers.anyLong()))
                 .thenReturn(VendaProdutoFactory.createListVendaProdutos());
+
+        BDDMockito.when(vendaProdutosRepositoryMock.findByVendaEquals(ArgumentMatchers.anyLong()))
+                .thenReturn(VendaProdutoFactory.createNonObjListVendaProdutos());
+
+        BDDMockito.when(vendaProdutosRepositoryMock.findByVendaIn(ArgumentMatchers.any(Venda.class)))
+                .thenReturn(ProdutoFactory.createListProdutoValid());
 
         BDDMockito.when(vendaProdutosRepositoryMock.buscaQtdProduto(ArgumentMatchers.anyLong()))
                 .thenReturn(VendaProdutoFactory.createListVendaProdutosQTD());
@@ -98,5 +106,27 @@ public class VendaProdutoServiceTest {
     public void removeProduto (){
         Assertions.assertThatCode(() ->vendaProdutoService.removeProduto(VendaProdutoFactory.createVendaProdutoValid().getCodigo()))
                 .doesNotThrowAnyException();
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("Teste do metodo listaVendaProduto que retorna uma lista de produtos vendidos")
+    public void listaVendaProduto() {
+        List<Produto> prodList = vendaProdutoService.listaVendaProduto(VendaFactory.createVendaValid());
+        Assertions.assertThat(prodList)
+                .isNotNull()
+                .isNotEmpty()
+                .hasSize(1);
+    }
+
+    //Increasing Coverage
+    @Test
+    @DisplayName("Teste do metodo listaVendaProdutos que retorna uma lista de objetos VendaProdutos")
+    public void listaVendaProdutos() {
+        List<VendaProduto> prodList = vendaProdutoService.listaVendaProdutos(VendaFactory.createVendaValid().getCodigo());
+        Assertions.assertThat(prodList)
+                .isNotNull()
+                .isNotEmpty()
+                .hasSize(1);
     }
 }

@@ -2,8 +2,11 @@ package net.originmobi.pdv.utilitarios;
 
 import net.originmobi.pdv.enumerado.ajuste.AjusteStatus;
 import net.originmobi.pdv.model.Ajuste;
+import org.springframework.data.domain.Page;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AjusteFactory {
 

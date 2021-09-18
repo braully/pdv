@@ -150,7 +150,15 @@ public class CaixaService {
     }
 
     public boolean caixaIsAberto() {
+<<<<<<< Updated upstream
         return caixas.caixaAberto().isPresent();
+=======
+        try{
+            if (caixas.caixaAberto()!= null) return true;
+
+        }catch(Exception e){}
+        return  false;
+>>>>>>> Stashed changes
     }
 
     public List<Caixa> listaTodos() {
