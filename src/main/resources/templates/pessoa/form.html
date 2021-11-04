@@ -62,7 +62,7 @@
 					<div class="form-group col-md-2">
 						<label for="nascimento">Data Nacimento</label> <input
 							id="nascimento" name="data_nascimento" type="text"
-							class="form-control" th:field="*{pessoa.data_nascimento}"
+							class="form-control" th:field="*{pessoa.dataNascimento}"
 							data-provide="datepicker" data-date-format="yyyy/mm/dd"
 							data-date-language="pt-BR" data-date-autoclose="true"
 							data-date-today-highlight="true" />
@@ -143,7 +143,7 @@
 						<div class="row">
 							<label for="fone">Telefone </label>
 							<div class="form-group col-md-2">
-								<input type="text" class="form-control" id="fone" name="fone"
+								<input type="text" class="form-control js-mascara-telefone" id="fone" name="fone"
 									th:value="*{telefone.fone}" th:field="*{telefone.fone}" />
 							</div>
 							<div class="col-md-2">
