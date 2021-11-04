@@ -8,8 +8,8 @@ import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
-import net.originmobi.pdv.enumerado.cartao.CartaoSituacao;
-import net.originmobi.pdv.enumerado.cartao.CartaoTipo;
+import net.originmobi.pdv.enumerado.CartaoSituacao;
+import net.originmobi.pdv.enumerado.CartaoTipo;
 
 @Entity
 @Table(name = "cartao_lancamento")

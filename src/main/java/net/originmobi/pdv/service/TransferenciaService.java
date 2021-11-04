@@ -4,7 +4,7 @@ import net.originmobi.pdv.model.Caixa;
 import net.originmobi.pdv.model.Transferencia;
 import net.originmobi.pdv.model.Usuario;
 import net.originmobi.pdv.repository.TransferenciaRepository;
-import net.originmobi.pdv.singleton.Aplicacao;
+import net.originmobi.pdv.utilitarios.Aplicacao;
 import net.originmobi.pdv.utilitarios.DataAtual;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

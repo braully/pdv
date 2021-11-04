@@ -12,7 +12,7 @@ import org.springframework.format.annotation.NumberFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 
 @Entity
 public class Caixa implements Serializable {

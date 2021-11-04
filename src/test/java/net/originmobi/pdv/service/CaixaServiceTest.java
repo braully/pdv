@@ -1,6 +1,6 @@
 package net.originmobi.pdv.service;
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.model.Caixa;
 import net.originmobi.pdv.model.CaixaLancamento;
 import net.originmobi.pdv.repository.CaixaRepository;

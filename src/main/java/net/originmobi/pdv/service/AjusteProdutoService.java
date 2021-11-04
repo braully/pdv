@@ -1,6 +1,6 @@
 package net.originmobi.pdv.service;
 
-import net.originmobi.pdv.enumerado.ajuste.AjusteStatus;
+import net.originmobi.pdv.enumerado.AjusteStatus;
 import net.originmobi.pdv.model.Ajuste;
 import net.originmobi.pdv.model.AjusteProduto;
 import net.originmobi.pdv.model.Produto;

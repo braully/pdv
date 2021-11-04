@@ -1,15 +1,15 @@
 package net.originmobi.pdv.controller;
 
-import net.originmobi.pdv.enumerado.notafiscal.NotaFiscalTipo;
+import net.originmobi.pdv.enumerado.NotaFiscalTipo;
 import net.originmobi.pdv.model.FreteTipo;
 import net.originmobi.pdv.model.NotaFiscal;
 import net.originmobi.pdv.model.Pessoa;
 import net.originmobi.pdv.model.Produto;
 import net.originmobi.pdv.service.PessoaService;
 import net.originmobi.pdv.service.ProdutoService;
-import net.originmobi.pdv.service.notafiscal.FreteTipoService;
-import net.originmobi.pdv.service.notafiscal.NotaFiscalItemService;
-import net.originmobi.pdv.service.notafiscal.NotaFiscalService;
+import net.originmobi.pdv.service.FreteTipoService;
+import net.originmobi.pdv.service.NotaFiscalItemService;
+import net.originmobi.pdv.service.NotaFiscalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;

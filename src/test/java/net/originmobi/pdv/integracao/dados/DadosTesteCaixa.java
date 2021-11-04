@@ -1,7 +1,7 @@
 package net.originmobi.pdv.integracao.dados;
 
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.model.Caixa;
 import net.originmobi.pdv.utilitarios.CaixaFactory;
 import org.springframework.util.LinkedMultiValueMap;

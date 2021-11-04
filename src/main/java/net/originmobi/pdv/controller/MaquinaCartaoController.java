@@ -1,10 +1,10 @@
 package net.originmobi.pdv.controller;
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.model.Caixa;
 import net.originmobi.pdv.model.cartao.MaquinaCartao;
 import net.originmobi.pdv.service.CaixaService;
-import net.originmobi.pdv.service.cartao.MaquinaCartaoService;
+import net.originmobi.pdv.service.MaquinaCartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;

@@ -1,11 +1,11 @@
 package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.enumerado.EntradaSaida;
-import net.originmobi.pdv.enumerado.ajuste.AjusteStatus;
+import net.originmobi.pdv.enumerado.AjusteStatus;
 import net.originmobi.pdv.filter.AjusteFilter;
 import net.originmobi.pdv.model.Ajuste;
 import net.originmobi.pdv.repository.AjusteRepository;
-import net.originmobi.pdv.singleton.Aplicacao;
+import net.originmobi.pdv.utilitarios.Aplicacao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

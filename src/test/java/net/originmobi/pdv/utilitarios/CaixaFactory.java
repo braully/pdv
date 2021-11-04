@@ -1,6 +1,6 @@
 package net.originmobi.pdv.utilitarios;
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.filter.BancoFilter;
 import net.originmobi.pdv.filter.CaixaFilter;
 import net.originmobi.pdv.model.Caixa;

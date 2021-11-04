@@ -10,8 +10,8 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
-import net.originmobi.pdv.enumerado.caixa.EstiloLancamento;
-import net.originmobi.pdv.enumerado.caixa.TipoLancamento;
+import net.originmobi.pdv.enumerado.EstiloLancamento;
+import net.originmobi.pdv.enumerado.TipoLancamento;
 
 @Entity
 @Table(name = "caixa_lancamento")

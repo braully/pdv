@@ -3,7 +3,7 @@ package net.originmobi.pdv.integracao;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.originmobi.pdv.controller.VendaController;
 import net.originmobi.pdv.enumerado.VendaSituacao;
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
+import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.integracao.dados.DadosTesteVenda;
 import net.originmobi.pdv.model.Receber;
 import net.originmobi.pdv.model.Venda;

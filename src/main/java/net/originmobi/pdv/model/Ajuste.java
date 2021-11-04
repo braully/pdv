@@ -1,6 +1,6 @@
 package net.originmobi.pdv.model;
 
-import net.originmobi.pdv.enumerado.ajuste.AjusteStatus;
+import net.originmobi.pdv.enumerado.AjusteStatus;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;

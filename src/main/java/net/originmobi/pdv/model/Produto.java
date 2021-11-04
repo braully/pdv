@@ -21,10 +21,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
 import net.originmobi.pdv.enumerado.Ativo;
-import net.originmobi.pdv.enumerado.produto.ProdutoBalanca;
-import net.originmobi.pdv.enumerado.produto.ProdutoControleEstoque;
-import net.originmobi.pdv.enumerado.produto.ProdutoSubstTributaria;
-import net.originmobi.pdv.enumerado.produto.ProdutoVendavel;
+import net.originmobi.pdv.enumerado.ProdutoBalanca;
+import net.originmobi.pdv.enumerado.ProdutoControleEstoque;
+import net.originmobi.pdv.enumerado.ProdutoSubstTributaria;
+import net.originmobi.pdv.enumerado.ProdutoVendavel;
 
 @Entity
 public class Produto implements Serializable {

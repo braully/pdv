@@ -1,10 +1,10 @@
 package net.originmobi.pdv.utilitarios;
 
 import net.originmobi.pdv.enumerado.Ativo;
-import net.originmobi.pdv.enumerado.produto.ProdutoBalanca;
-import net.originmobi.pdv.enumerado.produto.ProdutoControleEstoque;
-import net.originmobi.pdv.enumerado.produto.ProdutoSubstTributaria;
-import net.originmobi.pdv.enumerado.produto.ProdutoVendavel;
+import net.originmobi.pdv.enumerado.ProdutoBalanca;
+import net.originmobi.pdv.enumerado.ProdutoControleEstoque;
+import net.originmobi.pdv.enumerado.ProdutoSubstTributaria;
+import net.originmobi.pdv.enumerado.ProdutoVendavel;
 import net.originmobi.pdv.model.Produto;
 import net.originmobi.pdv.model.ProdutoEstoque;
 

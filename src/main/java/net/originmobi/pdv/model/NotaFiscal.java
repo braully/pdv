@@ -20,7 +20,7 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import net.originmobi.pdv.enumerado.notafiscal.NotaFiscalTipo;
+import net.originmobi.pdv.enumerado.NotaFiscalTipo;
 
 @Entity
 @Table(name = "nota_fiscal")

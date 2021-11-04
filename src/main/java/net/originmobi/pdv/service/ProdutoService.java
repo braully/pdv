@@ -1,8 +1,8 @@
 package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.enumerado.EntradaSaida;
-import net.originmobi.pdv.enumerado.produto.ProdutoControleEstoque;
-import net.originmobi.pdv.enumerado.produto.ProdutoSubstTributaria;
+import net.originmobi.pdv.enumerado.ProdutoControleEstoque;
+import net.originmobi.pdv.enumerado.ProdutoSubstTributaria;
 import net.originmobi.pdv.filter.ProdutoFilter;
 import net.originmobi.pdv.model.Produto;
 import net.originmobi.pdv.repository.ProdutoRepository;

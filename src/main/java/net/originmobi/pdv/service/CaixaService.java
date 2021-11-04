@@ -1,15 +1,15 @@
 package net.originmobi.pdv.service;
 
-import net.originmobi.pdv.enumerado.caixa.CaixaTipo;
-import net.originmobi.pdv.enumerado.caixa.EstiloLancamento;
-import net.originmobi.pdv.enumerado.caixa.TipoLancamento;
+import net.originmobi.pdv.enumerado.CaixaTipo;
+import net.originmobi.pdv.enumerado.EstiloLancamento;
+import net.originmobi.pdv.enumerado.TipoLancamento;
 import net.originmobi.pdv.filter.BancoFilter;
 import net.originmobi.pdv.filter.CaixaFilter;
 import net.originmobi.pdv.model.Caixa;
 import net.originmobi.pdv.model.CaixaLancamento;
 import net.originmobi.pdv.model.Usuario;
 import net.originmobi.pdv.repository.CaixaRepository;
-import net.originmobi.pdv.singleton.Aplicacao;
+import net.originmobi.pdv.utilitarios.Aplicacao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

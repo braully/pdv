@@ -2,12 +2,11 @@ package net.originmobi.pdv.service;
 
 import com.ibm.icu.text.DecimalFormat;
 import net.originmobi.pdv.enumerado.TituloTipo;
-import net.originmobi.pdv.enumerado.caixa.EstiloLancamento;
-import net.originmobi.pdv.enumerado.caixa.TipoLancamento;
+import net.originmobi.pdv.enumerado.EstiloLancamento;
+import net.originmobi.pdv.enumerado.TipoLancamento;
 import net.originmobi.pdv.model.*;
 import net.originmobi.pdv.repository.RecebimentoRepository;
-import net.originmobi.pdv.service.cartao.CartaoLancamentoService;
-import net.originmobi.pdv.singleton.Aplicacao;
+import net.originmobi.pdv.utilitarios.Aplicacao;
 import net.originmobi.pdv.utilitarios.DataAtual;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

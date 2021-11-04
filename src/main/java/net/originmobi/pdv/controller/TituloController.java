@@ -5,7 +5,7 @@ import net.originmobi.pdv.model.TituloTipo;
 import net.originmobi.pdv.model.cartao.MaquinaCartao;
 import net.originmobi.pdv.service.TituloService;
 import net.originmobi.pdv.service.TituloTipoService;
-import net.originmobi.pdv.service.cartao.MaquinaCartaoService;
+import net.originmobi.pdv.service.MaquinaCartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;

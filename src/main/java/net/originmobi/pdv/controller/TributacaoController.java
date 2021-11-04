@@ -3,7 +3,7 @@ package net.originmobi.pdv.controller;
 import net.originmobi.pdv.enumerado.EntradaSaida;
 import net.originmobi.pdv.model.*;
 import net.originmobi.pdv.service.*;
-import net.originmobi.pdv.service.notafiscal.CstIpiService;
+import net.originmobi.pdv.service.CstIpiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

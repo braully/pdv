@@ -1,7 +1,7 @@
 package net.originmobi.pdv.controller;
 
-import net.originmobi.pdv.enumerado.notafiscal.NotaFiscalTipo;
-import net.originmobi.pdv.service.notafiscal.NotaFiscalItemService;
+import net.originmobi.pdv.enumerado.NotaFiscalTipo;
+import net.originmobi.pdv.service.NotaFiscalItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

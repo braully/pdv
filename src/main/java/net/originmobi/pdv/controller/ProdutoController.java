@@ -1,14 +1,14 @@
 package net.originmobi.pdv.controller;
 
 import net.originmobi.pdv.enumerado.Ativo;
-import net.originmobi.pdv.enumerado.produto.ProdutoBalanca;
-import net.originmobi.pdv.enumerado.produto.ProdutoControleEstoque;
-import net.originmobi.pdv.enumerado.produto.ProdutoSubstTributaria;
-import net.originmobi.pdv.enumerado.produto.ProdutoVendavel;
+import net.originmobi.pdv.enumerado.ProdutoBalanca;
+import net.originmobi.pdv.enumerado.ProdutoControleEstoque;
+import net.originmobi.pdv.enumerado.ProdutoSubstTributaria;
+import net.originmobi.pdv.enumerado.ProdutoVendavel;
 import net.originmobi.pdv.filter.ProdutoFilter;
 import net.originmobi.pdv.model.*;
 import net.originmobi.pdv.service.*;
-import net.originmobi.pdv.service.notafiscal.ModBcIcmsService;
+import net.originmobi.pdv.service.ModBcIcmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

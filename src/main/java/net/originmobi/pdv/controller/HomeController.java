@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import net.originmobi.pdv.service.PagarParcelaService;
 import net.originmobi.pdv.service.ReceberService;
 import net.originmobi.pdv.service.VendaService;
-import net.originmobi.pdv.service.notafiscal.NotaFiscalService;
+import net.originmobi.pdv.service.NotaFiscalService;
 
 @Controller
 public class HomeController {
