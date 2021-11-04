@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import net.originmobi.pdv.model.cartao.CartaoLancamento;
+import net.originmobi.pdv.model.CartaoLancamento;
 
 public interface CartaoLancamentoRepository extends JpaRepository<CartaoLancamento, Long> {
 	

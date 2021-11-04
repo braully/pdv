@@ -1,6 +1,6 @@
 package net.originmobi.pdv.service;
 
-import net.originmobi.pdv.model.cartao.MaquinaCartao;
+import net.originmobi.pdv.model.MaquinaCartao;
 import net.originmobi.pdv.repository.MaquinaCartaoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

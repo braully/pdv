@@ -1,4 +1,4 @@
-package net.originmobi.pdv.model.cartao;
+package net.originmobi.pdv.model;
 
 import java.io.Serializable;
 import java.sql.Date;

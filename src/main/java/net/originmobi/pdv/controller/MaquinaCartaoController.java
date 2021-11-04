@@ -2,7 +2,7 @@ package net.originmobi.pdv.controller;
 
 import net.originmobi.pdv.enumerado.CaixaTipo;
 import net.originmobi.pdv.model.Caixa;
-import net.originmobi.pdv.model.cartao.MaquinaCartao;
+import net.originmobi.pdv.model.MaquinaCartao;
 import net.originmobi.pdv.service.CaixaService;
 import net.originmobi.pdv.service.MaquinaCartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
