@@ -1,4 +1,4 @@
-package net.originmobi.pdv.repository.cartao;
+package net.originmobi.pdv.repository;
 
 import java.util.List;
 

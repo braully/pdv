@@ -12,7 +12,7 @@ import net.originmobi.pdv.model.Titulo;
 import net.originmobi.pdv.model.Usuario;
 import net.originmobi.pdv.model.cartao.CartaoLancamento;
 import net.originmobi.pdv.model.cartao.MaquinaCartao;
-import net.originmobi.pdv.repository.cartao.CartaoLancamentoRepository;
+import net.originmobi.pdv.repository.CartaoLancamentoRepository;
 import net.originmobi.pdv.service.CaixaLancamentoService;
 import net.originmobi.pdv.service.UsuarioService;
 import net.originmobi.pdv.utilitarios.Aplicacao;

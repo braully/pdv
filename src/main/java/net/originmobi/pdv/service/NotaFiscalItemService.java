@@ -20,7 +20,7 @@ import net.originmobi.pdv.model.NotaFiscalTotais;
 import net.originmobi.pdv.model.Produto;
 import net.originmobi.pdv.model.Tributacao;
 import net.originmobi.pdv.model.TributacaoRegra;
-import net.originmobi.pdv.repository.cartao.NotaFiscalItemRepository;
+import net.originmobi.pdv.repository.NotaFiscalItemRepository;
 import net.originmobi.pdv.service.ProdutoService;
 
 @Service

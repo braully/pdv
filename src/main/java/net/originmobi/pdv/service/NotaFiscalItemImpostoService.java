@@ -3,7 +3,7 @@ package net.originmobi.pdv.service;
 import net.originmobi.pdv.model.Cst;
 import net.originmobi.pdv.model.NotaFiscalItemImposto;
 import net.originmobi.pdv.model.TributacaoRegra;
-import net.originmobi.pdv.repository.cartao.NotaFiscalItemImpostoRepository;
+import net.originmobi.pdv.repository.NotaFiscalItemImpostoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

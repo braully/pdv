@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.originmobi.pdv.model.FreteTipo;
-import net.originmobi.pdv.repository.cartao.FreteTipoRepository;
+import net.originmobi.pdv.repository.FreteTipoRepository;
 
 @Service
 public class FreteTipoService {

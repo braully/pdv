@@ -2,7 +2,7 @@ package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.enumerado.NotaFiscalTipo;
 import net.originmobi.pdv.model.*;
-import net.originmobi.pdv.repository.cartao.NotaFiscalRepository;
+import net.originmobi.pdv.repository.NotaFiscalRepository;
 import net.originmobi.pdv.service.EmpresaService;
 import net.originmobi.pdv.service.PessoaService;
 import net.originmobi.pdv.utilitarios.GeraXmlNfe;

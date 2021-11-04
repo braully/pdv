@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.originmobi.pdv.model.CstIPI;
-import net.originmobi.pdv.repository.cartao.CstIpiRepository;
+import net.originmobi.pdv.repository.CstIpiRepository;
 
 @Service
 public class CstIpiService {

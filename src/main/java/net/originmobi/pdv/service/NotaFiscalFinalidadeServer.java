@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import net.originmobi.pdv.model.NotaFiscalFinalidade;
-import net.originmobi.pdv.repository.cartao.NotaFiscalFinalidadeRepository;
+import net.originmobi.pdv.repository.NotaFiscalFinalidadeRepository;
 
 @Service
 public class NotaFiscalFinalidadeServer {

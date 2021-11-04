@@ -1,7 +1,7 @@
 package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.model.cartao.MaquinaCartao;
-import net.originmobi.pdv.repository.cartao.MaquinaCartaoRepository;
+import net.originmobi.pdv.repository.MaquinaCartaoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

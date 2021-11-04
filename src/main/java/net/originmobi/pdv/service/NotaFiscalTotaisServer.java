@@ -1,7 +1,7 @@
 package net.originmobi.pdv.service;
 
 import net.originmobi.pdv.model.NotaFiscalTotais;
-import net.originmobi.pdv.repository.cartao.NotaFiscalTotaisRepository;
+import net.originmobi.pdv.repository.NotaFiscalTotaisRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
