@@ -18,7 +18,7 @@ import net.originmobi.pdv.model.Venda;
 
 public interface VendaRepository extends JpaRepository<Venda, Long> {
 
-	public Page<Venda> findByCodigoIn(Long codigo, Pageable pageable);
+	public Page<Venda> findByCodigo(Long codigo, Pageable pageable);
 
 	@Transactional
 	@Modifying

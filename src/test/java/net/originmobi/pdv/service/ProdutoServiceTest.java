@@ -41,7 +41,7 @@ public class ProdutoServiceTest {
 
         BDDMockito.when(produtoRepositoryMock.findAll())
                 .thenReturn(ProdutoFactory.createListProdutoValid());
-        BDDMockito.when(produtoRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(produtoRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(ProdutoFactory.createProdutoValid());
         BDDMockito.when(produtoRepositoryMock.findById(ArgumentMatchers.anyLong()))
                 .thenReturn(Optional.of(ProdutoFactory.createProdutoValid()));
@@ -180,7 +180,7 @@ public class ProdutoServiceTest {
     @Test
     @DisplayName("teste do metodo movimentaEstoque com controle de estoque desativado (NAO)")
     public void movimentaEstoqueControleEstoqueNAO(){
-        BDDMockito.when(produtoRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(produtoRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(ProdutoFactory.createValidProdutoControlEstoqueNao());
 
         VendaProduto vendaProduto = VendaProdutoFactory.createVendaProdutoValid();
@@ -198,7 +198,7 @@ public class ProdutoServiceTest {
     @Test
     @DisplayName("teste do metodo AjsuteEstoque com ajuste já processado")
     public void AjsuteEstoqueJaProcessado(){
-        BDDMockito.when(produtoRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(produtoRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(ProdutoFactory.createValidProdutoControlEstoqueNao());
 
         Produto produto = ProdutoFactory.createValidProdutoControlEstoqueNao();

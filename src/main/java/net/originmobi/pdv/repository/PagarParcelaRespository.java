@@ -33,7 +33,7 @@ public interface PagarParcelaRespository extends JpaRepository<PagarParcela, Lon
 			+ "and f.nome like %:nome% order by pp.quitado", nativeQuery = true)
 	Page<PagarParcela> listaOrdenada(@Param("nome") String nome, Pageable pageable);
 
-	@Query(value = "select coalesce(format(sum(pp.valor_restante), 2, 'de_DE'), '0,00') from pagar p, parcela_pagar pp where pp.pagar_codigo = p.codigo "
+	@Query(value = "select coalesce(sum(pp.valor_restante), '0.00') from pagar p, parcela_pagar pp where pp.pagar_codigo = p.codigo "
 			+ "and pp.quitado = 0", nativeQuery = true)
 	String valorDespesasAbertas();
 }

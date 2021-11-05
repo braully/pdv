@@ -48,7 +48,7 @@ public class PessoaService {
     }
 
     public Pessoa busca(Long codigo) {
-        return pessoas.findByCodigoIn(codigo);
+        return pessoas.findByCodigo(codigo);
     }
 
     public Optional<Pessoa> buscaPessoa(Long codigo) {

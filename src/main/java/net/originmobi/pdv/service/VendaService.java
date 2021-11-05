@@ -86,7 +86,7 @@ public class VendaService {
         VendaSituacao situacaoVenda = situacao.equals("ABERTA") ? VendaSituacao.ABERTA : VendaSituacao.FECHADA;
 
         if (filter.getCodigo() != null)
-            return vendas.findByCodigoIn(filter.getCodigo(), pageable);
+            return vendas.findByCodigo(filter.getCodigo(), pageable);
         else
             return vendas.findBySituacaoEquals(situacaoVenda, pageable);
     }

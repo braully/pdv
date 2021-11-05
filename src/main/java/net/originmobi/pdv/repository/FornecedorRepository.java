@@ -10,8 +10,8 @@ public interface FornecedorRepository extends JpaRepository<Fornecedor, Long> {
 
 	public List<Fornecedor> findByNomeContaining(String nome);
 
-	public Fornecedor findByCnpjIn(String cnpj);
+	public Fornecedor findByCnpj(String cnpj);
 
-	public Fornecedor findByCodigoIn(Long codigo);
+	public Fornecedor findByCodigo(Long codigo);
 
 }

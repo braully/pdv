@@ -10,7 +10,7 @@ import net.originmobi.pdv.model.Endereco;
 
 public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
 
-	public Endereco findByCodigoIn(Long codigo);
+	public Endereco findByCodigo(Long codigo);
 
 	@Transactional
 	@Modifying

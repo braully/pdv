@@ -37,7 +37,7 @@ public class VendaProdutoServiceTest {
         BDDMockito.when(vendaProdutosRepositoryMock.save(ArgumentMatchers.any(VendaProduto.class)))
                 .thenReturn(VendaProdutoFactory.createVendaProdutoValid());
 
-        BDDMockito.when(vendaProdutosRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(vendaProdutosRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(VendaProdutoFactory.createVendaProdutoValid());
 
         BDDMockito.when(vendaProdutosRepositoryMock.findByProdutosDaVenda(ArgumentMatchers.anyLong()))
@@ -46,7 +46,7 @@ public class VendaProdutoServiceTest {
         BDDMockito.when(vendaProdutosRepositoryMock.findByVendaEquals(ArgumentMatchers.anyLong()))
                 .thenReturn(VendaProdutoFactory.createNonObjListVendaProdutos());
 
-        BDDMockito.when(vendaProdutosRepositoryMock.findByVendaIn(ArgumentMatchers.any(Venda.class)))
+        BDDMockito.when(vendaProdutosRepositoryMock.findByVenda(ArgumentMatchers.any(Venda.class)))
                 .thenReturn(ProdutoFactory.createListProdutoValid());
 
         BDDMockito.when(vendaProdutosRepositoryMock.buscaQtdProduto(ArgumentMatchers.anyLong()))

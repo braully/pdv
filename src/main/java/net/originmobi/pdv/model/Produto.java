@@ -49,7 +49,7 @@ public class Produto implements Serializable {
 
 	@Column(name = "valor_balanca")
 	@NumberFormat(pattern = "#,##0.00")
-	@Transient
+//	@Transient
 	private Double valorBalanca;
 
 	@Column(name = "balanca")

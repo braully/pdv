@@ -32,7 +32,7 @@ public class PagamentoTipoService {
     }
 
     public PagamentoTipo busca(Long codigo) {
-        return pagamentotipo.findByCodigoIn(codigo);
+        return pagamentotipo.findByCodigo(codigo);
     }
 
     public String qtdParcelas(Long codigo) {

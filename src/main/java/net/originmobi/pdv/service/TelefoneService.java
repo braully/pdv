@@ -29,6 +29,6 @@ public class TelefoneService {
 	}
 
 	public Telefone telefoneCodigo(Long codigo) {
-		return telefones.findByCodigoIn(codigo);
+		return telefones.findByCodigo(codigo);
 	}
 }

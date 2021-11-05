@@ -79,7 +79,7 @@ public class VendaControllerIntegracaoTest {
     @WithMockUser(roles = "VISUALIZAR_PEDIDO_ABERTO")
     public void testaListarPedidos() throws Exception {
         Mockito.when(vendaRepository.findBySituacaoEquals(Mockito.any(), Mockito.any())).thenReturn(DadosTesteVenda.pageVendaCompleto());
-        Mockito.when(vendaRepository.findByCodigoIn( Mockito.any(), Mockito.any())).thenReturn(DadosTesteVenda.pageVendaCompleto());
+        Mockito.when(vendaRepository.findByCodigo( Mockito.any(), Mockito.any())).thenReturn(DadosTesteVenda.pageVendaCompleto());
         mockMvc.perform(MockMvcRequestBuilders.get("/venda/status/ABERTA"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.model().attribute("vendas", Matchers.notNullValue()));
@@ -140,7 +140,7 @@ public class VendaControllerIntegracaoTest {
         Venda vendaAberta = VendaFactory.createVendaValid();
         vendaAberta.setSituacao(VendaSituacao.ABERTA);
         Mockito.when(vendaRepository.findByCodigoEquals(1L)).thenReturn(vendaAberta);
-        Mockito.when(pagamentoTipoRespository.findByCodigoIn(Mockito.any())).thenReturn(DadosTesteVenda.pagamentoTipoCompleto());
+        Mockito.when(pagamentoTipoRespository.findByCodigo(Mockito.any())).thenReturn(DadosTesteVenda.pagamentoTipoCompleto());
         Mockito.when(tituloRepository.findById(Mockito.any())).thenReturn(DadosTesteVenda.tituloCompleto());
         Mockito.when(caixaRepository.caixaAberto()).thenReturn(Optional.of(CaixaFactory.createValidCaixaToBeClosed(CaixaTipo.CAIXA)));
         Mockito.when(usuarioRepository.findByUserEquals(Mockito.anyString())).thenReturn(UsuarioFactory.createUserValid());

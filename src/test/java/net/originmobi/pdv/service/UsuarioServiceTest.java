@@ -127,7 +127,7 @@ public class UsuarioServiceTest {
     @DisplayName("Teste do metodo addGrupo")
     public void addGrupo(){
 
-        BDDMockito.when(usuarioRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(usuarioRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(UsuarioFactory.createUserValid());
         BDDMockito.when(grupoUsuarioServiceMock.buscaGrupo(ArgumentMatchers.anyLong()))
                 .thenReturn(GrupoUsuarioFactory.createGrupoUsuarioValid());
@@ -143,7 +143,7 @@ public class UsuarioServiceTest {
     @Test
     @DisplayName("Teste do metodo addGrupo tentando inserir um usuario em grupo que ele já inserido ")
     public void addGrupoExistente(){
-        BDDMockito.when(usuarioRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(usuarioRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(UsuarioFactory.createUserValidWithPeopleAndGroup());
         BDDMockito.when(grupoUsuarioServiceMock.buscaGrupo(ArgumentMatchers.anyLong()))
                 .thenReturn(GrupoUsuarioFactory.createGrupoUsuarioValid());
@@ -160,7 +160,7 @@ public class UsuarioServiceTest {
     @DisplayName("Teste do metodo removeGrupo")
     public void removeGrupo(){
 
-        BDDMockito.when(usuarioRepositoryMock.findByCodigoIn(ArgumentMatchers.anyLong()))
+        BDDMockito.when(usuarioRepositoryMock.findByCodigo(ArgumentMatchers.anyLong()))
                 .thenReturn(UsuarioFactory.createUserValid());
 
         BDDMockito.when(grupoUsuarioServiceMock.buscaGrupo(ArgumentMatchers.anyLong()))

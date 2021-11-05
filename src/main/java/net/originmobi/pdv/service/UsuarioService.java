@@ -78,7 +78,7 @@ public class UsuarioService {
     }
 
     public String addGrupo(Long codUsu, Long codGru) {
-        Usuario usuario = usuarios.findByCodigoIn(codUsu);
+        Usuario usuario = usuarios.findByCodigo(codUsu);
         GrupoUsuario gruposUsu = grupos.buscaGrupo(codGru);
 
         List<GrupoUsuario> gruposUsuario = usuario.getGrupoUsuario();
@@ -95,7 +95,7 @@ public class UsuarioService {
     }
 
     public String removeGrupo(Long codUsu, Long codGru) {
-        Usuario usuario = usuarios.findByCodigoIn(codUsu);
+        Usuario usuario = usuarios.findByCodigo(codUsu);
         GrupoUsuario gruposUsu = grupos.buscaGrupo(codGru);
 
         List<GrupoUsuario> todosGrupos = grupos.buscaGrupos(usuario);

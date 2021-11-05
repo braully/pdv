@@ -29,7 +29,7 @@ public class GrupoUsuario implements Serializable {
 	private String nome;
 
 	@NotBlank(message = "Descrição não pode ser em branco")
-	@Size(min = 4, max = 45, message = "Tamanho minio de quatro caracteres")
+	@Size(min = 4, max = 100, message = "Tamanho minio de quatro caracteres")
 	private String descricao;
 
 	@ManyToMany(cascade = CascadeType.MERGE)

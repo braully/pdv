@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 public class VendaFactory {
 
-    public static Venda createVendaValid(){
+    public static Venda createVendaValid() {
         Venda venda = new Venda();
         venda.setCodigo(10L);
         venda.setUsuario(UsuarioFactory.createUserValid());
@@ -17,7 +17,7 @@ public class VendaFactory {
         venda.setValorProdutos(100.00);
         venda.setDataFinalizado(new Timestamp(System.currentTimeMillis()));
         venda.setValorTotal(1000.00);
-        venda.setProduto(ProdutoFactory.createListProdutoValid());
+        venda.setProdutos(ProdutoFactory.createListProdutoValid());
         return venda;
 
     }

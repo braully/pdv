@@ -35,7 +35,7 @@ public class EnderecoService {
 	}
 
 	public Endereco enderecoCodigo(Long codigo) {
-		return enderecos.findByCodigoIn(codigo);
+		return enderecos.findByCodigo(codigo);
 	}
 
 	public void update(Long codigo, Long codcidade, String rua, String bairro, String numero, String cep,

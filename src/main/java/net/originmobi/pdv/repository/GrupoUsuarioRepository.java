@@ -13,9 +13,9 @@ import net.originmobi.pdv.model.Usuario;
 
 public interface GrupoUsuarioRepository extends JpaRepository<GrupoUsuario, Long> {
 
-	public List<GrupoUsuario> findByUsuarioIn(Usuario usuario);
+	public List<GrupoUsuario> findByUsuario(Usuario usuario);
 
-	public GrupoUsuario findByCodigoIn(Long codigo);
+	public GrupoUsuario findByCodigo(Long codigo);
 
 	@Transactional
 	@Modifying

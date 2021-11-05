@@ -1,7 +1,7 @@
-#INSERE PAISES
+--INSERE  PAISES
 insert into pais (nome, pais_codigo) values ('Brasil', '1058');
 
-#INSERE ESTADO
+--INSERE  ESTADO
 insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (1, '11', 'Rondônia','RO', 1);
 insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (2, '12', 'Acre', 'AC', 1);
 insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (3, '13', 'Amazonas', 'AM', 1);
@@ -30,85 +30,85 @@ insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (25, '51'
 insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (26, '52', 'Goiás', 'GO', 1);
 insert into estado (codigo, codigoUF, nome, sigla, pais_codigo) values (27, '53', 'Distrito Federal', 'DF', 1);
 
-#INSERE CIDADES
+--INSERE  CIDADES
 insert into cidade (nome, codigo_municipio, estado_codigo) values ('Cacoal', '1100049', 1);
 insert into cidade (nome, codigo_municipio, estado_codigo) values ('Seringueiras', '1101500', 1);
 insert into cidade (nome, codigo_municipio, estado_codigo) values ('Rolim de Moura', '1100288', 1);
 
-#INSERE GRUPO
+--INSERE  GRUPO
 insert into grupo (codigo, descricao, data_cadastro) values (1, 'Padrão', '2018-02-14');
 
-#INSERE CATEGORIA
+--INSERE  CATEGORIA
 insert into categoria (codigo, descricao, data_cadastro) values (1, 'Padrão', '2018-02-14');
 
-#INSERE TIPOS DE AMBIENTES PARA EMPRESA
+--INSERE  TIPOS DE AMBIENTES PARA EMPRESA
 insert into tipo_ambiente (codigo, descricao, tipo) values (1, 'Produção', 1);
 insert into tipo_ambiente (codigo, descricao, tipo) values (2, 'Homologação', 2);
 
-#INSERE PAGARTIPO
+--INSERE  PAGARTIPO
 insert into pagartipo (descricao, data_cadastro) values ('Despesa com fornecedor', sysdate());
 insert into pagartipo (descricao, data_cadastro) values ('Despesa com funcionário', sysdate());
 insert into pagartipo (descricao, data_cadastro) values ('Despesa com equipamentos', sysdate());
 insert into pagartipo (descricao, data_cadastro) values ('Despesa com saude', sysdate());
 insert into pagartipo (descricao, data_cadastro) values ('Outras', sysdate());
 
-#INSERE TITULOS
+--INSERE  TITULOS
 insert into titulo_tipo (codigo, descricao, sigla) values (1, 'Dinheiro', 'DIN');
 insert into titulo_tipo (codigo, descricao, sigla) values (2, 'Cartão Debito', 'CARTDEB');
 insert into titulo_tipo (codigo, descricao, sigla) values (3, 'Cartão Crédito', 'CARTCRED');
 
-#INSERE OS TIPOS DE PAGAMENTO
-insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('À Vista', '00', 1, date_format(sysdate(), '%Y/%m/%d'));
-insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('A Prazo', '30', 1, date_format(sysdate(), '%Y/%m/%d'));
-insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('Uma entrada + 30', '00/33', 2, date_format(sysdate(), '%Y/%m/%d'));
+--INSERE  OS TIPOS DE PAGAMENTO
+insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('À Vista', '00', 1, now());
+insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('A Prazo', '30', 1, now());
+insert into pagamento_tipo (descricao, forma_pagamento, qtd_parcelas, data_cadastro) values ('Uma entrada + 30', '00/33', 2, now());
 
-#INSERE ENDERECO DO FORNECEDOR
+--INSERE  ENDERECO DO FORNECEDOR
 insert into endereco (codigo, rua, bairro, numero, cep, referencia, data_cadastro, cidade_codigo) values (2, 'av: integração nacional', 'Centro', '725', '75934000', 'O Sorvetão', '2018-02-14', 2);
 
-#INSERE FORNECEDOR
+--INSERE  FORNECEDOR
 insert into fornecedor (codigo, nome_fantasia, nome, cnpj, inscricao_estadual, ativo, endereco_codigo, observacao, data_cadastro)
 values (1, 'Fornecedor Padrão', 'Fornecedor Padrão', '11915857000158', '', 1, 2, 'Fornecedor padrão do sistema', '2018-02-14');
 
-#INSERE TELEFONE DO FORNECEDOR
+--INSERE  TELEFONE DO FORNECEDOR
 insert into telefone (codigo, fone, tipo, data_cadastro) values (2, '684442467', 'CELULAR', '2018-02-14');
 
-#VINCULA TELEFONE AO FORNECEDOR
+--VINCULA TELEFONE AO FORNECEDOR
 insert into fornecedor_telefone (telefone_codigo, fornecedor_codigo) values (2, 1);
 
-#INSERE PRODUTO
+--INSERE  PRODUTO
 insert into produto (descricao, valor_venda, ativo, fornecedor_codigo, grupo_codigo, categoria_codigo, valor_balanca, balanca, subtributaria, vendavel, controla_estoque, data_cadastro)
-values ('Picolé', 6.5, 'ATIVO', 1, 1, 1, 0, 0, 0, 'SIM', 'SIM', '2018/02/27');
+values ('Picolé', 6.5, 'ATIVO', 1, 1, 1, 0, 0, 0, 'SIM', 'SIM', '2018-02-27');
 
-#INSERE PRODUTO
+--INSERE  PRODUTO
 insert into produto (descricao, valor_venda, ativo, fornecedor_codigo, grupo_codigo, categoria_codigo, valor_balanca, balanca, subtributaria, vendavel, controla_estoque, data_cadastro)
-values ('Sorvete Kg', 0, 'ATIVO', 1, 1, 1, 0, 1, 0, 'SIM', 'SIM', '2018/02/27');
+values ('Sorvete Kg', 0, 'ATIVO', 1, 1, 1, 0, 1, 0, 'SIM', 'SIM', '2018-02-27');
 
-#INSERE ENDERECO
+--INSERE  ENDERECO
 insert into endereco (codigo, rua, bairro, numero, cep, referencia, data_cadastro, cidade_codigo) values 
 (1, 'av: integração nacional', 'Centro', '725', '75934000', 'O Sorvetão', '2018-02-14', 2);
 
-#INSERE TELEFONE
+--INSERE  TELEFONE
 insert into telefone (codigo, fone, tipo, data_cadastro) values (1, '684442467', 'CELULAR', '2018-02-14');
 
-#INSERE PESSOA
+--INSERE  PESSOA
 insert into pessoa (nome, cpfcnpj, apelido, data_nascimento, observacao, endereco_codigo, data_cadastro) 
 values ('João Rafael Mendes Nogueira', '015.505.822-32', 'João', '1993-04-30', 'Cliente de teste', 1, '2018-02-14');
 
-#VINCULA PESSOA AO TELEFONE
+--VINCULA PESSOA AO TELEFONE
 insert into pessoa_telefone (pessoa_codigo, telefone_codigo) values (1, 1);
 
-#INSERE USUÁRIO GERENTE
+--INSERE  USUÁRIO GERENTE
 insert into usuario (user, senha, data_cadastro, pessoa_codigo) values ('gerente', '$2a$10$xuMmyd6tQXff3DbzCvpnMuRqnYhs7IT6OsoZM48tPeclqB2d7FQb.',
 '2018-02-14', 1);
 
-#INSERE GRUPOS ADMINISTRADOR E VENDEDOR
+--INSERE  GRUPOS ADMINISTRADOR E VENDEDOR
 insert into grupousuario (nome, descricao) values ('ADMINISTRADOR', 'Administrador com todas as permissões do sistema');
 insert into grupousuario (nome, descricao) values ('VENDEDOR', 'Grupo de vendedor do sistema');
 
-#VINCULA USUARIO A UM DETERMINADO GRUPO
+--VINCULA USUARIO A UM DETERMINADO GRUPO
 insert into usuario_grupousuario (grupo_usuario_codigo, usuario_codigo) values (1, 1);
 
-#INSERE PERMISSÕES 
+--INSERE  PERMISSÕES 
 insert into permissoes (codigo, nome, descricao) values (1, 'ENTRAR_NO_SISTEMA', 'Permite que o usuario realize o login');
 insert into permissoes (codigo, nome, descricao) values (2, 'VISUALIZAR_PESSOA', 'Permite que o usuario visualize o cadastro de pessoas');
 insert into permissoes (codigo, nome, descricao) values (3, 'EDITAR_PESSOA', 'Permite que o usuario edite cadastro de pessoas');
@@ -161,7 +161,7 @@ insert into permissoes (codigo, nome, descricao) values (49, 'PROCESSAR_CARTAO',
 insert into permissoes (codigo, nome, descricao) values (50, 'LISTA_AJUSTE', 'Permite que o usuario listar os ajustes de estoque');
 insert into permissoes (codigo, nome, descricao) values (51, 'FAZ_AJUSTE', 'Permite que o usuario realize e cancele ajustes');
 
-#VINCULA PERMISSÕES AOS GRUPOS
+--VINCULA PERMISSÕES AOS GRUPOS
 insert into permissoes_grupo_usuario (grupo_usuario_codigo, permissoes_codigo) values (1, 1);
 insert into permissoes_grupo_usuario (grupo_usuario_codigo, permissoes_codigo) values (1, 2);
 insert into permissoes_grupo_usuario (grupo_usuario_codigo, permissoes_codigo) values (1, 3);
@@ -215,48 +215,48 @@ insert into permissoes_grupo_usuario (grupo_usuario_codigo, permissoes_codigo) v
 insert into permissoes_grupo_usuario (grupo_usuario_codigo, permissoes_codigo) values (1, 51);
 
 
-#VINCULA USUARIO A DETERMINADA PERMISSÃO
-#insert into usuario_permissoes (usuario_codigo, permissoes_codigo) values (1, );
+--VINCULA USUARIO A DETERMINADA PERMISSÃO
+--insert into usuario_permissoes (usuario_codigo, permissoes_codigo) values (1, );
 
-#INSERE TIPOS DE REGIMES TRIBUTARIOS
+--INSERE  TIPOS DE REGIMES TRIBUTARIOS
 insert into regime_tributario (descricao, tipo_regime) values ('Simples Nacional', 1), ('Regime Normal', 2);
 
-#INSERE FINALIDADES DA NOTA FISCAL
+--INSERE  FINALIDADES DA NOTA FISCAL
 insert into nota_fiscal_finalidade (tipo, descricao) values (1, 'NF-e normal'), (2, 'NF-e complementar'), (3, 'NF-e de ajuste');
 
-#INSERE FRETE TIPO
+--INSERE  FRETE TIPO
 insert into frete_tipo (tipo, descricao) values (0, 'Por conta do emitente'), 
 (1, 'Por conta do destinatário/remetente'), (2, 'Por conta de terceiros'), (9, 'Sem frete');
 
-#INSERE MODALIDADE DA BASE DE CALCULO SEM ST
+--INSERE  MODALIDADE DA BASE DE CALCULO SEM ST
 insert into mod_bc_icms (tipo, descricao, sub_tributaria) values (0, 'Margem Valor Agregado (%)', 0), (1, 'Pauta (Valor)', 0),
 (2, 'Preço Tabelado Máx. (valor)', 0),(3, 'valor da operação', 0);
 
-#INSERE MODALIDADE DA BASE DE CALCULO COM ST
+--INSERE  MODALIDADE DA BASE DE CALCULO COM ST
 insert into mod_bc_icms (tipo, descricao, sub_tributaria) values (0, 'Preço tabelado ou máximo sugerido', 1), (1, 'Lista Negativa (valor)', 1),
 (2, 'Lista Positiva (valor)', 1),(3, 'Lista Neutra (valor)', 1),(4, 'Margem Valor Agregado (%)', 1),(3, 'Pauta (valor)', 1);
 
-#INSERE CSOSN
+--INSERE  CSOSN
 insert into cst_csosn (cst_csosn, simples_nacional) values ('101', 1),('102', 1),('103', 1),('201', 1),('202', 1),('203', 1),('300', 1),
 ('400', 1),('500', 1),('900', 1);
 
-#INSERE CST
+--INSERE  CST
 insert into cst_csosn (cst_csosn, simples_nacional) values ('00', 0),('10', 0),('20', 0),('30', 0),('40', 0),('41', 0),('50', 0),('51', 0),
 ('60', 0),('70', 0),('90', 0);
 
-#INSERE CST IPI ENTRADA
+--INSERE  CST IPI ENTRADA
 insert into cst_ipi (cst, descricao, tipo) values ('00', 'Entrada com Recuperação de Crédito', 'ENTRADA'),
 ('01', 'Entrada Tributada com Alíquota Zero', 'ENTRADA'),('02', 'Entrada Isenta', 'ENTRADA'),
 ('03', 'Entrada Não Tributada', 'ENTRADA'),('04', 'Entrada Imune', 'ENTRADA'),('05', 'Entrada com Suspensão', 'ENTRADA'),
 ('49', 'Outras Entradas', 'ENTRADA');
 
-#INSERE CST IPI SAÍDA
+--INSERE  CST IPI SAÍDA
 insert into cst_ipi (cst, descricao, tipo) values ('50', 'Saída Tributada', 'SAIDA'),('51', 'Saída Tributável com Alíquota Zero', 'SAIDA'),
 ('52', 'Saída Isenta', 'SAIDA'),('53', 'Saída Não Tributada', 'SAIDA'),('54', 'Saída Imune', 'SAIDA'),('55', 'Saída com Suspensão', 'SAIDA'),
 ('99', 'Outras Saídas', 'SAIDA');
 
 
-#INSERE CST - PIS/COFINS
+--INSERE  CST - PIS/COFINS
 insert into cst (cst, descricao) values ('01', 'Operação Tributável com Alíquota Básica'),
 ('02', 'Operação Tributável com Alíquota Diferenciada'),
 ('03', 'Operação Tributável com Alíquota por Unidade de Medida de Produto'),
@@ -291,7 +291,7 @@ insert into cst (cst, descricao) values ('01', 'Operação Tributável com Alíq
 ('98', 'Outras Operações de Entrada'),
 ('99', 'Outras Operações');
 
-#INSERE CFOPs
+--INSERE  CFOPs
 
 INSERT INTO `cfop` (`cfop`, `descricao`, `aplicacao`) VALUES
 ('1000',	'ENTRADAS OU AQUISIÇÕES DE SERVIÇOS DO ESTADO',	'Classificam-se, neste grupo, as operações ou prestações em que o estabelecimento remetente esteja localizado na mesma unidade da Federação do destinatário'),

@@ -24,11 +24,11 @@ public interface VendaProdutosRepository extends JpaRepository<VendaProduto, Lon
 			+ "where p.codigo = vp.produto_codigo and vp.venda_codigo = ?1", nativeQuery = true)
 	public List<Object> findByProdutosDaVenda(Long codigoVen);
 
-	public List<Produto> findByVendaIn(Venda venda);
+	public List<Produto> findByVenda(Venda venda);
 
 	public List<VendaProduto> findByVendaEquals(Long codigoVen);
 
-	public VendaProduto findByCodigoIn(Long codigo);
+	public VendaProduto findByCodigo(Long codigo);
 
 	@Transactional
 	@Modifying
