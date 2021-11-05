@@ -1,0 +1,2 @@
+#!/bin/bash
+./mvnw "-Dexec.args=-classpath %classpath net.originmobi.pdv.PdvApplication" -Dexec.executable=java -Dexec.classpathScope=runtime -DskipTests=true org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
