@@ -1,5 +1,9 @@
 # pdv
-Sistema de ERP web desenvolvido em Java com Spring Framework 
+Sistema de ERP web desenvolvido em Java com Spring Framework.
+
+Live demo: https://pdv-br.herokuapp.com
+usuário: gerente
+senha 123
 
 # Recursos
 - Cadastro produtos/clientes/fornecedor
