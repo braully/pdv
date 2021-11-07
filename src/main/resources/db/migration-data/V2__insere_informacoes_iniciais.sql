@@ -46,11 +46,11 @@ insert into tipo_ambiente (codigo, descricao, tipo) values (1, 'Produção', 1);
 insert into tipo_ambiente (codigo, descricao, tipo) values (2, 'Homologação', 2);
 
 --INSERE  PAGARTIPO
-insert into pagartipo (descricao, data_cadastro) values ('Despesa com fornecedor', sysdate());
-insert into pagartipo (descricao, data_cadastro) values ('Despesa com funcionário', sysdate());
-insert into pagartipo (descricao, data_cadastro) values ('Despesa com equipamentos', sysdate());
-insert into pagartipo (descricao, data_cadastro) values ('Despesa com saude', sysdate());
-insert into pagartipo (descricao, data_cadastro) values ('Outras', sysdate());
+insert into pagartipo (descricao, data_cadastro) values ('Despesa com fornecedor', now());
+insert into pagartipo (descricao, data_cadastro) values ('Despesa com funcionário', now());
+insert into pagartipo (descricao, data_cadastro) values ('Despesa com equipamentos', now());
+insert into pagartipo (descricao, data_cadastro) values ('Despesa com saude', now());
+insert into pagartipo (descricao, data_cadastro) values ('Outras', now());
 
 --INSERE  TITULOS
 insert into titulo_tipo (codigo, descricao, sigla) values (1, 'Dinheiro', 'DIN');
