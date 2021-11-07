@@ -98,7 +98,7 @@ values ('João Rafael Mendes Nogueira', '015.505.822-32', 'João', '1993-04-30',
 insert into pessoa_telefone (pessoa_codigo, telefone_codigo) values (1, 1);
 
 --INSERE  USUÁRIO GERENTE
-insert into usuario (user, senha, data_cadastro, pessoa_codigo) values ('gerente', '$2a$10$xuMmyd6tQXff3DbzCvpnMuRqnYhs7IT6OsoZM48tPeclqB2d7FQb.',
+insert into usuario ("user", senha, data_cadastro, pessoa_codigo) values ('gerente', '$2a$10$xuMmyd6tQXff3DbzCvpnMuRqnYhs7IT6OsoZM48tPeclqB2d7FQb.',
 '2018-02-14', 1);
 
 --INSERE  GRUPOS ADMINISTRADOR E VENDEDOR
