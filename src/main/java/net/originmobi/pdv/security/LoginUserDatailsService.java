@@ -32,7 +32,7 @@ public class LoginUserDatailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Usuario usuario = usuarios.findByUserContaining(username);
+		Usuario usuario = usuarios.findByUserNameContaining(username);
 
 		if (usuario == null)
 			throw new UsernameNotFoundException("Usuário não encontrado!");

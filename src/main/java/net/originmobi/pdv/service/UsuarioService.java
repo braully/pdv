@@ -45,7 +45,7 @@ public class UsuarioService {
             Usuario usuarioExiste = null;
             Usuario pessoaUsuario = null;
             try{
-                usuarioExiste = usuarios.findByUserEquals(usuario.getUser());
+                usuarioExiste = usuarios.findByUserNameEquals(usuario.getUser());
                 pessoaUsuario = usuarios.findByPessoaCodigoEquals(usuario.getPessoa().getCodigo());
             }
             catch(Exception e){
@@ -117,7 +117,7 @@ public class UsuarioService {
     }
 
     public Usuario buscaUsuario(String username) {
-        return usuarios.findByUserEquals(username);
+        return usuarios.findByUserNameEquals(username);
     }
 
 }

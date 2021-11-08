@@ -46,7 +46,7 @@ public class UsuarioServiceTest {
     public void cadastrar (){
 
         //vai dar erro pois nao tem try catch na classe UsuarioService
-        BDDMockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        BDDMockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn(null);
 
         BDDMockito.when(usuarioRepositoryMock.findByPessoaCodigoEquals(ArgumentMatchers.anyLong()))
@@ -64,7 +64,7 @@ public class UsuarioServiceTest {
     public void cadastrarComUserExistente(){
 
 
-        BDDMockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        BDDMockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn(UsuarioFactory.createUserValid());
 
         //vai dar erro pois nao tem try catch na classe UsuarioService
@@ -83,7 +83,7 @@ public class UsuarioServiceTest {
     public void casdastrarUserJaVinculado (){
 
         //vai dar erro pois nao tem try catch na classe UsuarioService
-        BDDMockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        BDDMockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn(null);
 
         BDDMockito.when(usuarioRepositoryMock.findByPessoaCodigoEquals(ArgumentMatchers.anyLong()))
@@ -180,7 +180,7 @@ public class UsuarioServiceTest {
     @Test
     @DisplayName("Teste do metodo buscaUsuario")
     public void buscaUsuario(){
-        BDDMockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        BDDMockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn(UsuarioFactory.createUserValid());
 
         Usuario expectedUser = UsuarioFactory.createUserValid();

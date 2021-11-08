@@ -7,6 +7,8 @@ import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Usuario implements Serializable {
@@ -17,9 +19,11 @@ public class Usuario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 
+        @Getter @Setter
 	@NotBlank(message = "Usuário não pode ser vazio")
 	@Size(min = 3, max = 20, message = "Tamanha minimo de 4 caracteres e máximo de 20 para usuario")
-	private String user;
+        @Column(name = "user_name")
+	private String userName;
 
 	@NotBlank(message = "Senha não pode ser vazia")
 	private String senha;
@@ -45,7 +49,7 @@ public class Usuario implements Serializable {
 	public Usuario(Long codigo, String user, String senha, Date dataCadastro, Pessoa pessoa,
                    List<GrupoUsuario> grupousuario, List<Permissoes> permissoes) {
 		this.codigo = codigo;
-		this.user = user;
+		this.userName = user;
 		this.senha = senha;
 		this.dataCadastro = dataCadastro;
 		this.pessoa = pessoa;
@@ -62,11 +66,11 @@ public class Usuario implements Serializable {
 	}
 
 	public String getUser() {
-		return user;
+		return userName;
 	}
 
 	public void setUser(String user) {
-		this.user = user;
+		this.userName = user;
 	}
 
 	public String getSenha() {

@@ -143,7 +143,7 @@ public class VendaControllerIntegracaoTest {
         Mockito.when(pagamentoTipoRespository.findByCodigo(Mockito.any())).thenReturn(DadosTesteVenda.pagamentoTipoCompleto());
         Mockito.when(tituloRepository.findById(Mockito.any())).thenReturn(DadosTesteVenda.tituloCompleto());
         Mockito.when(caixaRepository.caixaAberto()).thenReturn(Optional.of(CaixaFactory.createValidCaixaToBeClosed(CaixaTipo.CAIXA)));
-        Mockito.when(usuarioRepository.findByUserEquals(Mockito.anyString())).thenReturn(UsuarioFactory.createUserValid());
+        Mockito.when(usuarioRepository.findByUserNameEquals(Mockito.anyString())).thenReturn(UsuarioFactory.createUserValid());
         Mockito.when(receberRepository.save(Mockito.any())).thenAnswer(invocation -> {
             Receber receber = invocation.getArgument(0);
             receber.setCodigo(1L);

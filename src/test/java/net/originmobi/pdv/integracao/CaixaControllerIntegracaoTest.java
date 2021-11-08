@@ -82,7 +82,7 @@ class CaixaControllerIntegracaoTest {
         Mockito.when(caixaRepositoryMock.findById(Mockito.any()))
                 .thenReturn(Optional.of(DadosTesteCaixa.caixaCompleto()));
 
-        Mockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        Mockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn((UsuarioFactory.createUserValid()));
 
         mockMvc.perform(MockMvcRequestBuilders
@@ -102,7 +102,7 @@ class CaixaControllerIntegracaoTest {
         Mockito.when(caixaRepositoryMock.findById(Mockito.any()))
                 .thenReturn(Optional.of(DadosTesteCaixa.caixaFechado()));
 
-        Mockito.when(usuarioRepositoryMock.findByUserEquals(ArgumentMatchers.anyString()))
+        Mockito.when(usuarioRepositoryMock.findByUserNameEquals(ArgumentMatchers.anyString()))
                 .thenReturn((UsuarioFactory.createUserValid()));
 
         mockMvc.perform(MockMvcRequestBuilders
